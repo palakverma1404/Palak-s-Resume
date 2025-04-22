@@ -1,6 +1,4 @@
-/* ---------- VARIABLES ---------- */
 :root {
-    /* Gradient blues */
     --clr-bg-start: #0f172a;
     --clr-bg-mid1:  #15223e;
     --clr-bg-mid2:  #1a2a4d;
@@ -17,7 +15,6 @@
     --line: 1.6;
   }
   
-  /* ---------- GLOBAL ---------- */
   *,
   *::before,
   *::after { box-sizing: border-box; }
@@ -29,7 +26,6 @@
     line-height: var(--line);
     color: var(--clr-text);
   
-    /* Smooth multi‑stop gradient */
     background: linear-gradient(
       180deg,
       var(--clr-bg-start) 0%,
@@ -42,38 +38,32 @@
     min-height: 100vh;
   }
   
-  /* ---------- LINKS ---------- */
   a { color: var(--clr-accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
   
-  /* ---------- LAYOUT HELPERS ---------- */
   .container { width:min(100% - 2rem, var(--max-width)); margin-inline:auto; }
   .grid { display:grid; gap:1.2rem; }
   .skills { grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); }
   .two-col { display:grid; gap:2rem; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
   
-  /* ---------- HEADER ---------- */
   header { text-align:center; padding:3rem 0 2rem; }
   .avatar {
     width:140px; height:140px; object-fit:cover;
     border-radius:50%; border:3px solid rgba(255,255,255,0.6);
     box-shadow: var(--shadow); margin-bottom:1rem;
   }
-  /* name and camera icon */
   .name-with-icon { display:inline-flex; align-items:center; gap:0.4rem; }
   .name-with-icon a { font-size:1.3rem; transition:transform 0.2s ease; }
   .name-with-icon a.flash { animation: flash 0.5s ease-in-out; }
   
   .tagline { font-size:1.1rem; color:var(--clr-muted); margin-bottom:1rem; }
   
-  /* ---------- TYPOGRAPHY ---------- */
   h1,h2,h3{ line-height:1.25; font-weight:600; margin:0 0 0.5em; }
   h1{ font-size:2.2rem; }
   h2{ font-size:1.4rem; }
   h3{ font-size:1.1rem; }
   p,li{ margin:0 0 0.6em; }
   
-  /* ---------- CARDS ---------- */
   section,
   .edu,
   .experience li {
@@ -96,7 +86,6 @@
       inset 0 0 18px rgba(255,255,255,0.75);
   }
   
-  /* ---------- OTHER COMPONENTS ---------- */
   .contact {
     list-style:none; padding:0; margin:1rem auto;
     display:flex; flex-wrap:wrap; gap:1rem; justify-content:center;
@@ -109,10 +98,8 @@
   .courses { font-size:0.95rem; }
   .experience { padding-left:1rem; }
   
-  /* ---------- FOOTER ---------- */
   footer { text-align:center; padding:2rem 0; font-size:0.85rem; color:var(--clr-muted); }
   
-  /* ---------- FLASH KEYFRAMES ---------- */
   @keyframes flash {
     0% { color:#fff;     transform:scale(1.2); }
     50%{ color:#facc15; transform:scale(1.0); }
